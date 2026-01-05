@@ -1,16 +1,8 @@
-<header class="fixed top-0 left-60 right-0 h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 z-40">
-    <!-- Search -->
-    <div class="relative w-72">
-        <i class="bi bi-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-        <input type="text" 
-               placeholder="Cari pegawai..." 
-               class="w-full pl-11 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition-all">
-    </div>
-
+<header class="fixed top-0 left-60 right-0 h-20 bg-white border-b border-slate-200 flex items-center justify-end px-8 z-40">
     <!-- Right Section -->
     <div class="flex items-center gap-5">
         <!-- Notification -->
-        <button class="relative w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover: bg-slate-100 transition-all">
+        <button class="relative w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 transition-all">
             <i class="bi bi-bell text-xl"></i>
             <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
         </button>

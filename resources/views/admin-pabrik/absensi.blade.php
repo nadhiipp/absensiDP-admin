@@ -107,6 +107,12 @@
     <div class="px-5 py-4 border-b border-slate-200 flex justify-between items-center">
         <h3 class="text-base font-semibold text-slate-800">Daftar Absensi Hari Ini</h3>
         <div class="flex gap-3">
+             <div class="relative w-72">
+        <i class="bi bi-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+        <input type="text" 
+               placeholder="Cari pegawai..." 
+               class="w-full pl-11 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition-all">
+    </div>
             <button class="px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-600 bg-white hover:bg-slate-50 transition-all inline-flex items-center gap-2">
                 <i class="bi bi-printer"></i>
                 Cetak
@@ -131,6 +137,7 @@
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Jam Keluar</th>
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Status</th>
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Keterangan</th>
+                    <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Aksi</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-slate-100">
@@ -170,6 +177,16 @@
                         @endif
                     </td>
                     <td class="px-5 py-4 text-sm text-slate-500">{{ $a['ket'] }}</td>
+                     <td class="px-5 py-4">
+                        <div class="flex items-center gap-1">
+                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-red-50 hover: text-red-500 transition-all cursor-pointer">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

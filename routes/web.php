@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pabrik\Dashboard_Controller;
 use App\Http\Controllers\Pabrik\Absensi_Controller;
 use App\Http\Controllers\Pabrik\DataPegawai_Controller;
+use App\Http\Controllers\Pabrik\DataPabrik_Controller;
 use App\Http\Controllers\Pabrik\Laporan_Controller;
 use App\Http\Controllers\Pabrik\Pengaturan_Controller;
 use App\Http\Controllers\Pabrik\RekapAbsensi_Controller;
@@ -25,6 +26,7 @@ Route::prefix('pabrik')->name('admin-pabrik.')->group(function () {
     Route::get('/dashboard', [Dashboard_Controller::class, 'index'])->name('dashboard');
     Route::get('/absensi', [Absensi_Controller::class, 'index'])->name('absensi');
     Route::get('/data-pegawai', [DataPegawai_Controller::class, 'index'])->name('data-pegawai');
+    Route::get('/data-pabrik', [DataPabrik_Controller::class, 'index'])->name('data-pabrik');
     Route::get('/rekap-absensi', [RekapAbsensi_Controller:: class, 'index'])->name('rekap-absensi');
     Route::get('/laporan', [Laporan_Controller::class, 'index'])->name('laporan');
     Route::get('/shift-kerja', [ShiftKerja_Controller::class, 'index'])->name('shift-kerja');

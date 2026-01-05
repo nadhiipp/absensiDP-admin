@@ -18,6 +18,24 @@
             <span>Dashboard</span>
         </a>
         
+        <a href="{{ route('admin-pabrik.data-pegawai') }}" 
+           class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
+                  {{ request()->routeIs('admin-pabrik.data-pegawai') 
+                     ?  'bg-emerald-50 text-emerald-600' 
+                     : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700' }}">
+            <i class="bi bi-people text-lg"></i>
+            <span>Data Pegawai</span>
+        </a>
+
+        <a href="{{ route('admin-pabrik.data-pabrik') }}" 
+           class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
+                  {{ request()->routeIs('admin-pabrik.data-pabrik') 
+                     ?  'bg-emerald-50 text-emerald-600' 
+                     : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700' }}">
+            <i class="bi bi-building text-lg"></i>
+            <span>Data Pabrik</span>
+        </a>
+
         <a href="{{ route('admin-pabrik.absensi') }}" 
            class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
                   {{ request()->routeIs('admin-pabrik.absensi') 
@@ -27,14 +45,6 @@
             <span>Absensi Hari Ini</span>
         </a>
         
-        <a href="{{ route('admin-pabrik.data-pegawai') }}" 
-           class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
-                  {{ request()->routeIs('admin-pabrik.data-pegawai') 
-                     ?  'bg-emerald-50 text-emerald-600' 
-                     : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700' }}">
-            <i class="bi bi-people text-lg"></i>
-            <span>Data Pegawai</span>
-        </a>
         
         <a href="{{ route('admin-pabrik.rekap-absensi') }}" 
            class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
