@@ -124,7 +124,7 @@
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Shift</th>
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Tanggal Masuk</th>
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Status</th>
-                    <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Aksi</th>
+                    <th class="text-left px-14 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Aksi</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-slate-100">
@@ -161,7 +161,17 @@
                         @endif
                     </td>
                     <td class="px-5 py-4">
-                        <button class="text-sm text-blue-600 hover:text-blue-700 font-medium">Edit</button>
+                        <div class="flex items-center gap-1">
+                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-red-50 hover: text-red-500 transition-all cursor-pointer">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
                     </td>
                 </tr>
                 @endforeach

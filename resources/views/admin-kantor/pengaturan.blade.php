@@ -78,7 +78,7 @@
                 <h4 class="text-sm font-medium text-slate-800">Metode Absensi</h4>
                 <p class="text-sm text-slate-500 mt-0.5">Fingerprint, Face Recognition, QR Code</p>
             </div>
-            <button class="text-sm text-slate-500 hover:text-blue-600 font-medium">Kelola</button>
+          
         </div>
         <div class="px-6 py-4 flex justify-between items-center">
             <div>

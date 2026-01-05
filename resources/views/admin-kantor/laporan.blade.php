@@ -139,6 +139,93 @@
     </div>
 </div>
 
+
+<!-- Generate Custom individu -->
+<div class="bg-white border border-slate-200 rounded-xl p-6 mb-6">
+    <h3 class="text-base font-semibold text-slate-800 mb-5">Generate Laporan Perorangan</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+        <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Jenis Laporan</label>
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
+                <option>Laporan Kehadiran</option>
+                <option>Laporan Keterlambatan</option>
+                <option>Laporan Izin/Sakit</option>
+                <option>Laporan Per Shift</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Tanggal Mulai</label>
+            <div class="relative">
+                <input type="date" value="2025-12-01" class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
+            </div>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Tanggal Akhir</label>
+            <div class="relative">
+                <input type="date" value="2025-12-25" class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+        <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Departemen</label>
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
+                <option>Pilih Departemen</option>
+                <option>Produksi</option>
+                <option>Quality Control</option>
+                <option>Warehouse</option>
+                <option>HRD</option>
+                <option>Maintenance</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Shift</label>
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
+                <option>Semua Shift</option>
+                <option>Pagi</option>
+                <option>Siang</option>
+                <option>Malam</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Format Export</label>
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
+                <option>PDF</option>
+                <option>Excel</option>
+                <option>CSV</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+        <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Nama Pegawai</label>
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
+                <option>Semua Pegawai</option>
+                <option>Rayfan </option>
+                <option>Arsyal </option>
+                <option>Andra</option>
+                <option>Nadhip</option>
+                <option>Budi Santoso</option>
+            </select>
+        </div>
+        
+    </div>
+
+    <div class="flex justify-end gap-3">
+        <button class="px-4 py-2.5 border border-slate-200 rounded-lg text-sm font-medium text-slate-600 bg-white hover:bg-slate-50 transition-all inline-flex items-center gap-2">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            Reset
+        </button>
+        <button class="px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
+            <i class="bi bi-download"></i>
+            Generate & Download Laporan
+        </button>
+    </div>
+</div>
+
 <!-- Riwayat Laporan -->
 <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
     <div class="px-5 py-4 border-b border-slate-200">

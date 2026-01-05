@@ -16,9 +16,9 @@
         <div>
             <p class="text-sm text-slate-500 mb-2">Sudah Absen</p>
             <p class="text-3xl font-bold text-slate-800 mb-2">324</p>
-            <p class="text-xs font-medium text-blue-500">94.7% dari total</p>
+            <p class="text-xs font-medium text-emerald-500">94.7% dari total</p>
         </div>
-        <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center text-blue-500">
+        <div class="w-11 h-11 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-500">
             <i class="bi bi-check-circle-fill text-xl"></i>
         </div>
     </div>
@@ -65,7 +65,7 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Status</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-emerald-500">
                 <option>Semua Status</option>
                 <option>Hadir</option>
                 <option>Terlambat</option>
@@ -75,7 +75,7 @@
         </div>
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Shift</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-emerald-500">
                 <option>Semua Shift</option>
                 <option>Pagi</option>
                 <option>Siang</option>
@@ -84,7 +84,7 @@
         </div>
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Departemen</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
                 <option>Semua Departemen</option>
                 <option>Produksi</option>
                 <option>Quality Control</option>
@@ -107,11 +107,17 @@
     <div class="px-5 py-4 border-b border-slate-200 flex justify-between items-center">
         <h3 class="text-base font-semibold text-slate-800">Daftar Absensi Hari Ini</h3>
         <div class="flex gap-3">
+             <div class="relative w-72">
+        <i class="bi bi-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+        <input type="text" 
+               placeholder="Cari pegawai..." 
+               class="w-full pl-11 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition-all">
+    </div>
             <button class="px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-600 bg-white hover:bg-slate-50 transition-all inline-flex items-center gap-2">
                 <i class="bi bi-printer"></i>
                 Cetak
             </button>
-            <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
+            <button class="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
                 <i class="bi bi-plus-lg"></i>
                 Tambah Absen Manual
             </button>
@@ -131,6 +137,7 @@
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Jam Keluar</th>
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Status</th>
                     <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Keterangan</th>
+                    <th class="text-left px-5 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wide">Aksi</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-slate-100">
@@ -160,7 +167,7 @@
                     <td class="px-5 py-4 text-sm text-slate-600">{{ $a['keluar'] }}</td>
                     <td class="px-5 py-4">
                         @if($a['status'] == 'Hadir')
-                            <span class="px-2. 5 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Hadir</span>
+                            <span class="px-2. 5 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Hadir</span>
                         @elseif($a['status'] == 'Terlambat')
                             <span class="px-2.5 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Terlambat</span>
                         @elseif($a['status'] == 'Izin')
@@ -170,6 +177,16 @@
                         @endif
                     </td>
                     <td class="px-5 py-4 text-sm text-slate-500">{{ $a['ket'] }}</td>
+                     <td class="px-5 py-4">
+                        <div class="flex items-center gap-1">
+                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-red-50 hover: text-red-500 transition-all cursor-pointer">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
