@@ -9,6 +9,6 @@ class Pengaturan_Controller extends Controller
 {
     public function index()
     {
-        return view('admin-kantor.pengaturan');
+        return view('admin-kantor.pengaturan.pengaturan');
     }
 }

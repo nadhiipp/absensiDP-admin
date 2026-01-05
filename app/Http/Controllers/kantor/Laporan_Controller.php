@@ -9,6 +9,6 @@ class Laporan_Controller extends Controller
 {
     public function index()
     {
-        return view('admin-kantor.laporan');
+        return view('admin-kantor.laporan.laporan');
     }
 }

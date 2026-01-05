@@ -9,6 +9,6 @@ class RekapAbsensi_Controller extends Controller
 {
      public function index()
     {
-        return view('admin-kantor.rekap-absensi');
+        return view('admin-kantor.rekap.rekap-absensi');
     }
 }

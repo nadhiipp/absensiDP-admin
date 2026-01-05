@@ -9,7 +9,7 @@
         <h1 class="text-2xl font-semibold text-slate-800">Data Kantor</h1>
         <p class="text-sm text-slate-500 mt-1">Kelola informasi kantor dan cabang</p>
     </div>
-    <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium inline-flex items-center gap-2 transition-all cursor-pointer">
+    <button onclick="openModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium inline-flex items-center gap-2 transition-all cursor-pointer">
         <i class="bi bi-plus-lg"></i>
         Tambah Kantor
     </button>
@@ -97,10 +97,10 @@
                     </td>
                     <td class="px-5 py-4">
                         <div class="flex items-center gap-1">
-                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
+                            <button onclick="openModalEdit()" class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
                                 <i class="bi bi-pencil-square"></i>
                             </button>
-                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-red-50 hover: text-red-500 transition-all cursor-pointer">
+                            <button onclick="openModalDelete()" class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-red-50 hover: text-red-500 transition-all cursor-pointer">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </div>
@@ -111,4 +111,8 @@
         </table>
     </div>
 </div>
+
+@include('admin-kantor.kantor.create')
+@include('admin-kantor.kantor.edit')
+@include('admin-kantor.kantor.delete')
 @endsection

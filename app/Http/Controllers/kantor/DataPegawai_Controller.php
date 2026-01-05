@@ -9,6 +9,6 @@ class DataPegawai_Controller extends Controller
 {
     public function index()
     {
-        return view('admin-kantor.data-pegawai');
+        return view('admin-kantor.pegawai.data-pegawai');
     }
 }

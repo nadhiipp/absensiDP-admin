@@ -11,6 +11,7 @@
 
 <!-- Stats Cards -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+     <a href="{{ route('admin-kantor.data-pegawai') }}">
     <!-- Total Pegawai -->
     <div class="bg-white border border-slate-200 rounded-xl p-5 flex justify-between items-start">
         <div>
@@ -22,11 +23,13 @@
             <i class="bi bi-people-fill text-xl"></i>
         </div>
     </div>
+     </a>
 
     <!-- Hadir Hari Ini -->
+    <a href="{{ route('admin-kantor.rekap-absensi') }}">
     <div class="bg-white border border-slate-200 rounded-xl p-5 flex justify-between items-start">
         <div>
-            <p class="text-sm text-slate-500 mb-2">Hadir Hari Ini</p>
+            <p class="text-sm text-slate-500 mb-2">Kehadiran</p>
             <p class="text-3xl font-bold text-slate-800 mb-2">324</p>
             <p class="text-xs font-medium text-blue-500">94. 7% kehadiran</p>
         </div>
@@ -34,7 +37,9 @@
             <i class="bi bi-check-circle-fill text-xl"></i>
         </div>
     </div>
-
+    </a>
+    
+<a href="{{ route('admin-kantor.rekap-absensi') }}">
     <!-- Tidak Hadir -->
     <div class="bg-white border border-slate-200 rounded-xl p-5 flex justify-between items-start">
         <div>
@@ -46,7 +51,9 @@
             <i class="bi bi-exclamation-triangle-fill text-xl"></i>
         </div>
     </div>
+</a>
 
+<a href="{{ route('admin-kantor.rekap-absensi') }}">
     <!-- Terlambat -->
     <div class="bg-white border border-slate-200 rounded-xl p-5 flex justify-between items-start">
         <div>
@@ -58,6 +65,7 @@
             <i class="bi bi-clock-fill text-xl"></i>
         </div>
     </div>
+</a>
 </div>
 
 <!-- Charts Section -->

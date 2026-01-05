@@ -9,6 +9,6 @@ class DataKantor_Controller extends Controller
 {
     public function index()
     {
-        return view('admin-kantor.data-kantor');
+        return view('admin-kantor.kantor.data-kantor');
     }
 }

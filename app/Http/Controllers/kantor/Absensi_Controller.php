@@ -9,6 +9,6 @@ class Absensi_Controller extends Controller
 {
     public function index()
     {
-        return view('admin-kantor.absensi');
+        return view('admin-kantor.absensi.absensi');
     }
 }
