@@ -1,6 +1,6 @@
-@extends('layouts.pabrik.app')
+@extends('layouts.kantor.app')
 
-@section('title', 'Laporan Absensi - Absensi Pabrik')
+@section('title', 'Laporan Absensi - Absensi Kantor')
 
 @section('content')
 <!-- Page Header -->
@@ -15,12 +15,12 @@
     <div class="bg-white border border-slate-200 rounded-xl p-5">
         <div class="flex justify-between items-start mb-3">
             <p class="text-xs text-slate-500">Laporan Harian</p>
-            <div class="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center text-white">
+            <div class="w-9 h-9 bg-blue-500 rounded-lg flex items-center justify-center text-white">
                 <i class="bi bi-calendar-day text-sm"></i>
             </div>
         </div>
         <h3 class="text-sm font-semibold text-slate-800 mb-4">Rekap Kehadiran Per Hari</h3>
-        <button class="w-full px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all">
+        <button class="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all">
             Generate Laporan
         </button>
     </div>
@@ -29,12 +29,12 @@
     <div class="bg-white border border-slate-200 rounded-xl p-5">
         <div class="flex justify-between items-start mb-3">
             <p class="text-xs text-slate-500">Laporan Mingguan</p>
-            <div class="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center text-white">
+            <div class="w-9 h-9 bg-blue-500 rounded-lg flex items-center justify-center text-white">
                 <i class="bi bi-calendar-week text-sm"></i>
             </div>
         </div>
         <h3 class="text-sm font-semibold text-slate-800 mb-4">Rekap Kehadiran Per Minggu</h3>
-        <button class="w-full px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all">
+        <button class="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all">
             Generate Laporan
         </button>
     </div>
@@ -43,12 +43,12 @@
     <div class="bg-white border border-slate-200 rounded-xl p-5">
         <div class="flex justify-between items-start mb-3">
             <p class="text-xs text-slate-500">Laporan Bulanan</p>
-            <div class="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center text-white">
+            <div class="w-9 h-9 bg-blue-500 rounded-lg flex items-center justify-center text-white">
                 <i class="bi bi-calendar-month text-sm"></i>
             </div>
         </div>
         <h3 class="text-sm font-semibold text-slate-800 mb-4">Rekap Kehadiran Per Bulan</h3>
-        <button class="w-full px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all">
+        <button class="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all">
             Generate Laporan
         </button>
     </div>
@@ -57,12 +57,12 @@
     <div class="bg-white border border-slate-200 rounded-xl p-5">
         <div class="flex justify-between items-start mb-3">
             <p class="text-xs text-slate-500">Laporan Custom</p>
-            <div class="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center text-white">
+            <div class="w-9 h-9 bg-blue-500 rounded-lg flex items-center justify-center text-white">
                 <i class="bi bi-gear text-sm"></i>
             </div>
         </div>
         <h3 class="text-sm font-semibold text-slate-800 mb-4">Pilih Rentang Tanggal</h3>
-        <button class="w-full px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all">
+        <button class="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all">
             Generate Laporan
         </button>
     </div>
@@ -75,7 +75,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Jenis Laporan</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
                 <option>Laporan Kehadiran</option>
                 <option>Laporan Keterlambatan</option>
                 <option>Laporan Izin/Sakit</option>
@@ -85,13 +85,13 @@
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Tanggal Mulai</label>
             <div class="relative">
-                <input type="date" value="2025-12-01" class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
+                <input type="date" value="2025-12-01" class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
             </div>
         </div>
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Tanggal Akhir</label>
             <div class="relative">
-                <input type="date" value="2025-12-25" class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
+                <input type="date" value="2025-12-25" class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
             </div>
         </div>
     </div>
@@ -99,7 +99,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Departemen</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
                 <option>Semua Departemen</option>
                 <option>Produksi</option>
                 <option>Quality Control</option>
@@ -110,7 +110,7 @@
         </div>
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Shift</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-emerald-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
                 <option>Semua Shift</option>
                 <option>Pagi</option>
                 <option>Siang</option>
@@ -119,7 +119,7 @@
         </div>
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Format Export</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-emerald-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
                 <option>PDF</option>
                 <option>Excel</option>
                 <option>CSV</option>
@@ -132,7 +132,7 @@
             <i class="bi bi-arrow-counterclockwise"></i>
             Reset
         </button>
-        <button class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
+        <button class="px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
             <i class="bi bi-download"></i>
             Generate & Download Laporan
         </button>
@@ -177,10 +177,10 @@
                     <td class="px-5 py-4 text-sm text-slate-600">{{ $r['dept'] }}</td>
                     <td class="px-5 py-4 text-sm text-slate-600">{{ $r['format'] }}</td>
                     <td class="px-5 py-4">
-                        <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">{{ $r['status'] }}</span>
+                        <span class="px-2.5 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">{{ $r['status'] }}</span>
                     </td>
                     <td class="px-5 py-4">
-                        <button class="text-sm text-slate-500 hover:text-emerald-600 font-medium inline-flex items-center gap-1">
+                        <button class="text-sm text-slate-500 hover:text-blue-600 font-medium inline-flex items-center gap-1">
                             <i class="bi bi-download"></i>
                             Download
                         </button>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Absensi Pabrik')</title>
+    <title>@yield('title', 'Absensi Kantor')</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2? family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@
 </head>
 <body class="bg-slate-50 min-h-screen antialiased">
     
-    @include('layouts.pabrik.sidebar')
-    @include('layouts.pabrik.navbar')
+    @include('layouts.kantor.sidebar')
+    @include('layouts.kantor.navbar')
 
     <main class="ml-60 mt-16 p-8 min-h-[calc(100vh-64px)]">
         @yield('content')

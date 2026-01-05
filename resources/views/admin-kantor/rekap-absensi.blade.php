@@ -1,6 +1,6 @@
-@extends('layouts.pabrik.app')
+@extends('layouts.kantor.app')
 
-@section('title', 'Rekap Absensi - Absensi Pabrik')
+@section('title', 'Rekap Absensi - Absensi Kantor')
 
 @section('content')
 <!-- Page Header -->
@@ -16,9 +16,9 @@
         <div>
             <p class="text-sm text-slate-500 mb-2">Rata-rata Kehadiran</p>
             <p class="text-3xl font-bold text-slate-800 mb-2">94. 2%</p>
-            <p class="text-xs font-medium text-emerald-500">Bulan Desember 2025</p>
+            <p class="text-xs font-medium text-blue-500">Bulan Desember 2025</p>
         </div>
-        <div class="w-11 h-11 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-500">
+        <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center text-blue-500">
             <i class="bi bi-graph-up-arrow text-xl"></i>
         </div>
     </div>
@@ -30,7 +30,7 @@
             <p class="text-3xl font-bold text-slate-800 mb-2">22</p>
             <p class="text-xs font-medium text-slate-500">Hari kerja efektif</p>
         </div>
-        <div class="w-11 h-11 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
+        <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
             <i class="bi bi-calendar-check-fill text-xl"></i>
         </div>
     </div>
@@ -65,7 +65,7 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Bulan</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
                 <option>Desember 2025</option>
                 <option>November 2025</option>
                 <option>Oktober 2025</option>
@@ -73,7 +73,7 @@
         </div>
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Departemen</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
                 <option>Semua Departemen</option>
                 <option>Produksi</option>
                 <option>Quality Control</option>
@@ -84,7 +84,7 @@
         </div>
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-2">Shift</label>
-            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-emerald-500">
+            <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
                 <option>Semua Shift</option>
                 <option>Pagi</option>
                 <option>Siang</option>
@@ -92,7 +92,7 @@
             </select>
         </div>
         <div class="flex items-end">
-            <button class="w-full px-4 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center justify-center gap-2">
+            <button class="w-full px-4 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center justify-center gap-2">
                 <i class="bi bi-search"></i>
                 Tampilkan Data
             </button>
@@ -109,7 +109,7 @@
                 <i class="bi bi-printer"></i>
                 Cetak PDF
             </button>
-            <button class="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
+            <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
                 <i class="bi bi-file-earmark-excel"></i>
                 Export Excel
             </button>
@@ -163,7 +163,7 @@
                         @php
                             $persenNum = floatval(str_replace('%', '', $r['persen']));
                         @endphp
-                        <span class="text-sm font-medium {{ $persenNum >= 95 ? 'text-emerald-500' : ($persenNum >= 85 ? 'text-amber-500' : 'text-red-500') }}">
+                        <span class="text-sm font-medium {{ $persenNum >= 95 ? 'text-blue-500' : ($persenNum >= 85 ? 'text-amber-500' : 'text-red-500') }}">
                             {{ $r['persen'] }}
                         </span>
                     </td>

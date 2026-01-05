@@ -1,6 +1,6 @@
-@extends('layouts.pabrik.app')
+@extends('layouts.kantor.app')
 
-@section('title', 'Shift Kerja - Absensi Pabrik')
+@section('title', 'Shift Kerja - Absensi Kantor')
 
 @section('content')
 <!-- Page Header -->
@@ -34,7 +34,7 @@
             </div>
             <div class="flex justify-between items-center">
                 <span class="text-sm text-slate-500">Status</span>
-                <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Aktif</span>
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Aktif</span>
             </div>
         </div>
     </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="flex justify-between items-center">
                 <span class="text-sm text-slate-500">Status</span>
-                <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Aktif</span>
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Aktif</span>
             </div>
         </div>
     </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="flex justify-between items-center">
                 <span class="text-sm text-slate-500">Status</span>
-                <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Aktif</span>
+                <span class="px-2.5 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Aktif</span>
             </div>
         </div>
     </div>
@@ -105,7 +105,7 @@
                 <i class="bi bi-download"></i>
                 Export Excel
             </button>
-            <button class="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
+            <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all inline-flex items-center gap-2">
                 <i class="bi bi-plus-lg"></i>
                 Tambah Penugasan
             </button>
@@ -117,7 +117,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
                 <label class="block text-sm font-medium text-slate-700 mb-2">Shift</label>
-                <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-emerald-500">
+                <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus: outline-none focus: border-blue-500">
                     <option>Semua Shift</option>
                     <option>Shift Pagi</option>
                     <option>Shift Siang</option>
@@ -126,7 +126,7 @@
             </div>
             <div>
                 <label class="block text-sm font-medium text-slate-700 mb-2">Departemen</label>
-                <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500">
+                <select class="w-full px-4 py-2.5 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500">
                     <option>Semua Departemen</option>
                     <option>Produksi</option>
                     <option>Quality Control</option>
@@ -136,7 +136,7 @@
                 </select>
             </div>
             <div class="flex items-end">
-                <button class="w-full px-4 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all">
+                <button class="w-full px-4 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all">
                     Terapkan Filter
                 </button>
             </div>
@@ -184,10 +184,10 @@
                     <td class="px-5 py-4 text-sm text-slate-600">{{ $p['jam'] }}</td>
                     <td class="px-5 py-4 text-sm text-slate-600">{{ $p['mulai'] }}</td>
                     <td class="px-5 py-4">
-                        <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">{{ $p['status'] }}</span>
+                        <span class="px-2.5 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">{{ $p['status'] }}</span>
                     </td>
                     <td class="px-5 py-4">
-                        <button class="text-sm text-slate-500 hover: text-emerald-600 font-medium">Ubah Shift</button>
+                        <button class="text-sm text-slate-500 hover: text-blue-600 font-medium">Ubah Shift</button>
                     </td>
                 </tr>
                 @endforeach

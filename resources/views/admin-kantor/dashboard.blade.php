@@ -1,6 +1,6 @@
-@extends('layouts.pabrik.app')
+@extends('layouts.kantor.app')
 
-@section('title', 'Dashboard - Absensi Pabrik')
+@section('title', 'Dashboard - Absensi kantor')
 
 @section('content')
 <!-- Page Header -->
@@ -16,9 +16,9 @@
         <div>
             <p class="text-sm text-slate-500 mb-2">Total Pegawai</p>
             <p class="text-3xl font-bold text-slate-800 mb-2">342</p>
-            <p class="text-xs font-medium text-emerald-500">Pegawai aktif</p>
+            <p class="text-xs font-medium text-blue-500">Pegawai aktif</p>
         </div>
-        <div class="w-11 h-11 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
+        <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
             <i class="bi bi-people-fill text-xl"></i>
         </div>
     </div>
@@ -28,9 +28,9 @@
         <div>
             <p class="text-sm text-slate-500 mb-2">Hadir Hari Ini</p>
             <p class="text-3xl font-bold text-slate-800 mb-2">324</p>
-            <p class="text-xs font-medium text-emerald-500">94. 7% kehadiran</p>
+            <p class="text-xs font-medium text-blue-500">94. 7% kehadiran</p>
         </div>
-        <div class="w-11 h-11 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-500">
+        <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center text-blue-500">
             <i class="bi bi-check-circle-fill text-xl"></i>
         </div>
     </div>
@@ -144,7 +144,7 @@
 
         <!-- Activity Item 2 -->
         <div class="flex items-start gap-4 py-4 border-b border-slate-100">
-            <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white text-xs font-semibold shrink-0">
+            <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-semibold shrink-0">
                 SA
             </div>
             <div class="flex-1 min-w-0">
