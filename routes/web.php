@@ -1,33 +1,48 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Kantor\Dashboard_Controller;
-use App\Http\Controllers\Kantor\DataKantor_Controller;
-use App\Http\Controllers\Kantor\Pegawai_Controller;
-use App\Http\Controllers\Kantor\Laporan_Controller;
-use App\Http\Controllers\Kantor\Pengaturan_Controller;
+use App\Http\Controllers\Sekolah\AdminDashboardController;
+use App\Http\Controllers\Sekolah\AdminAbsensiController;
+use App\Http\Controllers\Sekolah\AdminMasterController;
+use App\Http\Controllers\Sekolah\AdminLaporanController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-*/
+// ======================
+// REDIRECT ROOT URL
+// ======================
+Route::redirect('/', '/admin/dashboard');
+Route::redirect('/home', '/admin/dashboard');
 
-Route:: get('/', function () {
-    return redirect()->route('admin-kantor.dashboard');
+// ======================
+// ADMIN ROUTES
+// ======================
+Route::prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+
+        // Dashboard
+        Route::get('/dashboard', [AdminDashboardController::class, 'index'])
+            ->name('dashboard');
+
+        // Absensi
+        Route::get('/absensi-today', [AdminAbsensiController::class, 'today'])
+            ->name('absensi.today');
+
+        // Master Data
+        Route::get('/data-kelas', [AdminMasterController::class, 'kelas'])
+            ->name('data.kelas');
+
+        Route::get('/data-siswa', [AdminMasterController::class, 'siswa'])
+            ->name('data.siswa');
+
+        // Laporan
+        Route::get('/laporan-absensi', [AdminLaporanController::class, 'laporan'])
+            ->name('laporan.absensi');
+
+        Route::get('/riwayat-absensi', [AdminLaporanController::class, 'riwayat'])
+            ->name('riwayat.absensi');
+    });
+
+
+Route::fallback(function () {
+    return redirect('/admin/dashboard');
 });
-
-// Kantor Admin Routes
-Route::prefix('kantor')->name('admin-kantor.')->group(function () {
-    Route::get('/dashboard', [Dashboard_Controller::class, 'index'])->name('dashboard');
-    Route::get('/data-kantor', [DataKantor_Controller::class, 'index'])->name('data-kantor');
-    Route::get('/pegawai', [Pegawai_Controller:: class, 'index'])->name('pegawai');
-    Route::get('/laporan', [Laporan_Controller::class, 'index'])->name('laporan');
-    Route::get('/pengaturan', [Pengaturan_Controller:: class, 'index'])->name('pengaturan');
-});
-
-// Auth Routes
-Route::post('/logout', function () {
-    // Logout logic here
-    return redirect('/');
-})->name('logout');
