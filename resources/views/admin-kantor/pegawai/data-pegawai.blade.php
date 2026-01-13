@@ -157,9 +157,9 @@
                             <button onclick="openModalEdit()" class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
                                 <i class="bi bi-pencil-square"></i>
                             </button>
-                            <button class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
+                            <a href="{{ route('admin-kantor.data-pegawai.detail') }}" class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-all cursor-pointer">
                                 <i class="bi bi-eye"></i>
-                            </button>
+                            </a>
                             <button onclick="openModalDelete()" class="w-8 h-8 inline-flex items-center justify-center rounded-lg text-slate-400 hover:bg-red-50 hover: text-red-500 transition-all cursor-pointer">
                                 <i class="bi bi-trash"></i>
                             </button>

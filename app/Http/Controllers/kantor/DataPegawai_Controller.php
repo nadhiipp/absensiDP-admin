@@ -11,4 +11,8 @@ class DataPegawai_Controller extends Controller
     {
         return view('admin-kantor.pegawai.data-pegawai');
     }
+    public function detail()
+    {
+        return view('admin-kantor.pegawai.detail');
+    }
 }

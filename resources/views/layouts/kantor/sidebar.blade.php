@@ -35,6 +35,16 @@
             <i class="bi bi-building text-lg"></i>
             <span>Data Kantor</span>
         </a>
+
+        <a href="{{ route('admin-kantor.jadwal-kerja') }}" 
+        class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
+                {{ request()->routeIs('admin-kantor.jadwal-kerja') 
+                    ? 'bg-blue-50 text-blue-600' 
+                    :  'text-slate-500 hover:bg-slate-50 hover:text-slate-700' }}">
+            <i class="bi bi-calendar-week text-lg"></i>
+            <span>Jadwal Kerja</span>
+        </a>
+
         
         <a href="{{ route('admin-kantor.absensi') }}" 
            class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
@@ -63,9 +73,8 @@
             <i class="bi bi-file-text text-lg"></i>
             <span>Laporan</span>
         </a>
-        
       
-        
+{{--         
         <a href="{{ route('admin-kantor.shift-kerja') }}" 
            class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
                   {{ request()->routeIs('admin-kantor.shift-kerja') 
@@ -73,7 +82,7 @@
                      : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700' }}">
             <i class="bi bi-clock-history text-lg"></i>
             <span>Shift Kerja</span>
-        </a>
+        </a> --}}
         
         <a href="{{ route('admin-kantor.pengaturan') }}" 
            class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium mb-1 transition-all duration-200 no-underline
